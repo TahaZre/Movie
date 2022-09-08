@@ -12,3 +12,18 @@ class Person:
             'Born': self.born,
             'Nationality': self.nationality,
         }
+
+    @property
+    def role(self):
+        return self.__role
+
+    @role.setter
+    def role(self, role):
+        if role.lower() == 'd':
+            self.__role = 'Director'
+        elif role.lower() == 'c':
+            self.__role = 'Cast'
+        elif role.lower() == 'w':
+            self.__role = 'Writer'
+        else:
+            self.__role = 'Staff'
